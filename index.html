@@ -1,3 +1,6 @@
+(No subject)
+Rabi Hashmi
+zjfashion@hotmail.com
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,953 +8,1732 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ZJ Fashion | Zahida Javed</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Josefin+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
 <style>
-*{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+:root{
+--ivory:#F7F3EC;
+--emerald:#123C35;
+--gold:#C8A96B;
+--black:#171717;
+--white:#fff;
 }
 
-html{
-  scroll-behavior:smooth;
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
+
+html{scroll-behavior:smooth}
 
 body{
-  font-family:Arial,Helvetica,sans-serif;
-  color:#111;
-  background:#fff;
+background:var(--ivory);
+color:var(--black);
+font-family:'Josefin Sans',sans-serif;
 }
 
-button,
-input,
-textarea{
-  font:inherit;
-}
+button,input,textarea{font-family:inherit}
+button{cursor:pointer}
 
-button{
-  cursor:pointer;
+.top-bar{
+background:var(--emerald);
+color:var(--ivory);
+text-align:center;
+padding:10px;
+font-size:10px;
+letter-spacing:4px;
 }
-
-img{
-  display:block;
-  width:100%;
-}
-
-a{
-  color:inherit;
-  text-decoration:none;
-}
-
-/* HEADER */
 
 header{
-  border-bottom:1px solid #ddd;
-  background:#fff;
-  position:sticky;
-  top:0;
-  z-index:50;
+background:var(--ivory);
+border-bottom:1px solid rgba(200,169,107,.5);
+position:sticky;
+top:0;
+z-index:1000;
 }
 
-.nav{
-  max-width:1400px;
-  margin:auto;
-  min-height:90px;
-  padding:18px 30px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:30px;
+.header-main{
+max-width:1450px;
+margin:auto;
+padding:18px 35px;
+display:grid;
+grid-template-columns:1fr auto 1fr;
+align-items:center;
+gap:25px;
 }
 
 .logo{
-  text-align:center;
-  letter-spacing:4px;
-  font-size:25px;
-  font-weight:500;
+text-decoration:none;
+color:var(--emerald);
+display:flex;
+align-items:center;
 }
 
-.logo span{
-  display:block;
-  font-size:9px;
-  letter-spacing:4px;
-  margin-top:7px;
+.logo-mark{
+width:62px;
+height:62px;
+border:1px solid var(--gold);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+position:relative;
+margin-right:12px;
 }
 
-.nav-links{
-  display:flex;
-  align-items:center;
-  gap:28px;
-  font-size:12px;
-  letter-spacing:1px;
+.logo-mark:before{
+content:"";
+position:absolute;
+width:46px;
+height:46px;
+border:1px solid var(--gold);
+border-radius:50%;
 }
 
-.nav-links a:hover{
-  opacity:.55;
+.logo-zj{
+position:relative;
+z-index:2;
+font-family:'Bodoni Moda',serif;
+font-size:24px;
+letter-spacing:-3px;
 }
 
-.nav-actions{
-  display:flex;
-  align-items:center;
-  gap:18px;
+.logo-main{
+display:block;
+font-family:'Bodoni Moda',serif;
+font-size:25px;
+letter-spacing:4px;
 }
 
-.nav-button{
-  background:none;
-  border:0;
-  font-size:12px;
-  letter-spacing:1px;
+.logo-sub{
+display:block;
+color:var(--gold);
+font-size:7px;
+letter-spacing:3px;
+margin-top:5px;
 }
 
-.bag-count{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-width:18px;
-  height:18px;
-  border-radius:50%;
-  background:#111;
-  color:#fff;
-  font-size:10px;
-  margin-left:3px;
+.nav{
+grid-column:2;
+grid-row:2;
+display:flex;
+justify-content:center;
+gap:28px;
 }
 
-/* HERO */
+.nav a{
+text-decoration:none;
+color:var(--black);
+font-size:10px;
+letter-spacing:2px;
+}
+
+.nav a:hover{color:var(--gold)}
+
+.header-actions{
+justify-self:end;
+display:flex;
+align-items:center;
+gap:18px;
+}
+
+.icon-btn{
+border:0;
+background:none;
+color:var(--emerald);
+display:flex;
+align-items:center;
+gap:6px;
+font-size:9px;
+letter-spacing:1.5px;
+}
+
+.icon{
+width:20px;
+height:20px;
+stroke:currentColor;
+fill:none;
+stroke-width:1.5;
+stroke-linecap:round;
+stroke-linejoin:round;
+}
+
+.bag-number{
+min-width:17px;
+height:17px;
+border-radius:50%;
+background:var(--gold);
+color:var(--emerald);
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:8px;
+}
 
 .hero{
-  min-height:520px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  background:#f5f2ee;
-  padding:70px 25px;
+min-height:690px;
+background:
+linear-gradient(90deg,rgba(18,60,53,.95),rgba(18,60,53,.5),rgba(18,60,53,.1)),
+linear-gradient(135deg,#315c52,#d8cdb9);
+display:flex;
+align-items:center;
+position:relative;
 }
 
-.hero-inner{
-  max-width:800px;
+.hero:after{
+content:"";
+position:absolute;
+right:8%;
+width:400px;
+height:570px;
+border:1px solid rgba(247,243,236,.35);
+transform:rotate(6deg);
 }
 
-.hero small{
-  letter-spacing:4px;
-  font-size:10px;
+.hero-content{
+position:relative;
+z-index:2;
+max-width:1450px;
+width:100%;
+margin:auto;
+padding:80px 8%;
+color:var(--ivory);
+}
+
+.hero-present{
+color:var(--gold);
+font-size:11px;
+letter-spacing:6px;
+margin-bottom:25px;
 }
 
 .hero h1{
-  margin:20px 0;
-  font-family:Georgia,serif;
-  font-weight:400;
-  font-size:clamp(45px,7vw,90px);
-  letter-spacing:3px;
+font-family:'Bodoni Moda',serif;
+font-size:clamp(60px,9vw,125px);
+line-height:.85;
+font-weight:400;
+letter-spacing:4px;
 }
 
-.hero p{
-  max-width:600px;
-  margin:0 auto 30px;
-  color:#555;
-  line-height:1.8;
+.hero-line{
+width:105px;
+height:1px;
+background:var(--gold);
+margin:30px 0 22px;
 }
 
-.hero-btn{
-  display:inline-block;
-  background:#111;
-  color:#fff;
-  padding:15px 30px;
-  font-size:11px;
-  letter-spacing:2px;
+.hero-slogan{
+font-family:'Cormorant Garamond',serif;
+font-size:25px;
+letter-spacing:4px;
+font-style:italic;
 }
 
-/* SECTIONS */
+.hero-button{
+margin-top:38px;
+border:1px solid var(--gold);
+background:var(--gold);
+color:var(--emerald);
+padding:16px 30px;
+letter-spacing:3px;
+font-size:10px;
+}
 
-section{
-  max-width:1400px;
-  margin:auto;
-  padding:80px 30px;
+.section{
+padding:90px 5%;
+max-width:1500px;
+margin:auto;
 }
 
 .section-heading{
-  display:flex;
-  align-items:end;
-  justify-content:space-between;
-  margin-bottom:35px;
+text-align:center;
+margin-bottom:45px;
+}
+
+.eyebrow{
+color:var(--gold);
+font-size:9px;
+letter-spacing:4px;
+margin-bottom:12px;
 }
 
 .section-heading h2{
-  font-family:Georgia,serif;
-  font-size:32px;
-  font-weight:400;
+font-family:'Bodoni Moda',serif;
+color:var(--emerald);
+font-size:48px;
+font-weight:400;
 }
 
-.section-heading p{
-  color:#777;
-  font-size:11px;
-  letter-spacing:1px;
+.gold-line{
+width:70px;
+height:1px;
+background:var(--gold);
+margin:20px auto;
 }
 
-/* PRODUCT GRID */
-
-.product-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:25px;
+.products{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:22px;
 }
 
-.product-card{
-  position:relative;
-  background:#fafafa;
+.product{
+background:var(--white);
+overflow:hidden;
+position:relative;
 }
 
 .product-image{
-  aspect-ratio:3/4;
-  overflow:hidden;
-  background:#eee;
+height:430px;
+position:relative;
+overflow:hidden;
+background:#ddd;
 }
 
 .product-image img{
-  height:100%;
-  object-fit:cover;
-  transition:.4s;
+width:100%;
+height:100%;
+object-fit:cover;
+display:block;
+transition:.5s;
+cursor:pointer;
 }
 
-.product-card:hover .product-image img{
-  transform:scale(1.025);
+.product:hover .product-image img{
+transform:scale(1.04);
+}
+
+.product-badge{
+position:absolute;
+top:15px;
+left:15px;
+z-index:3;
+background:var(--gold);
+color:var(--emerald);
+padding:8px 10px;
+font-size:8px;
+letter-spacing:2px;
+}
+
+.product-heart{
+position:absolute;
+right:15px;
+top:15px;
+z-index:3;
+width:36px;
+height:36px;
+border:0;
+border-radius:50%;
+background:rgba(247,243,236,.9);
+color:var(--emerald);
+font-size:20px;
 }
 
 .product-info{
-  padding:17px 2px 25px;
+padding:20px;
+}
+
+.product-info h3{
+color:var(--emerald);
+font-family:'Cormorant Garamond',serif;
+font-size:22px;
+font-weight:500;
+line-height:1.1;
 }
 
 .product-type{
-  font-size:9px;
-  color:#777;
-  letter-spacing:1px;
-  margin-bottom:8px;
+color:#777;
+font-size:9px;
+letter-spacing:1.5px;
+margin:7px 0;
 }
 
-.product-name{
-  font-family:Georgia,serif;
-  font-size:16px;
-  line-height:1.4;
-  margin-bottom:9px;
+.price{
+font-size:12px;
+margin-bottom:12px;
+font-weight:500;
 }
 
-.product-price{
-  font-size:12px;
-  letter-spacing:1px;
-  margin-bottom:14px;
+.product-details{
+border-top:1px solid #e4ddd3;
+padding-top:12px;
+color:#666;
+font-size:9px;
+letter-spacing:1px;
 }
 
-.product-buttons{
-  display:flex;
-  gap:8px;
+.add-btn{
+width:100%;
+margin-top:15px;
+padding:12px;
+border:1px solid var(--emerald);
+background:var(--emerald);
+color:var(--ivory);
+font-size:9px;
+letter-spacing:2px;
 }
 
-.add-btn,
-.view-btn{
-  flex:1;
-  padding:11px 8px;
-  font-size:9px;
-  letter-spacing:1px;
-  border:1px solid #111;
-  background:#111;
-  color:#fff;
+.add-btn:hover{
+background:var(--gold);
+border-color:var(--gold);
+color:var(--emerald);
 }
 
-.view-btn{
-  background:#fff;
-  color:#111;
+.editorial{
+background:var(--emerald);
+color:var(--ivory);
+display:grid;
+grid-template-columns:1fr 1fr;
 }
 
-.badge{
-  position:absolute;
-  top:12px;
-  left:12px;
-  z-index:2;
-  background:#fff;
-  padding:7px 9px;
-  font-size:8px;
-  letter-spacing:1px;
+.editorial-image{
+min-height:560px;
+background:linear-gradient(145deg,#c6b9a7,#536f65,#dcd4c8);
 }
 
-/* ABOUT */
-
-.about{
-  background:#f5f2ee;
-  max-width:none;
+.editorial-content{
+display:flex;
+align-items:center;
+padding:70px 12%;
 }
 
-.about-inner{
-  max-width:900px;
-  margin:auto;
-  text-align:center;
+.editorial-content h2{
+font-family:'Bodoni Moda',serif;
+font-size:58px;
+font-weight:400;
+line-height:1;
+margin-bottom:25px;
 }
 
-.about h2{
-  font-family:Georgia,serif;
-  font-size:42px;
-  font-weight:400;
-  margin-bottom:25px;
+.editorial-content p{
+font-family:'Cormorant Garamond',serif;
+font-size:20px;
+line-height:1.6;
 }
 
-.about p{
-  color:#555;
-  line-height:1.9;
+.outline-btn{
+margin-top:30px;
+background:none;
+color:var(--ivory);
+border:1px solid var(--gold);
+padding:14px 26px;
+font-size:9px;
+letter-spacing:3px;
 }
 
-/* DRAWERS */
-
-.drawer-overlay{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.35);
-  opacity:0;
-  pointer-events:none;
-  transition:.25s;
-  z-index:90;
+.features{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+border-top:1px solid var(--gold);
+border-bottom:1px solid var(--gold);
 }
 
-.drawer-overlay.open{
-  opacity:1;
-  pointer-events:auto;
+.feature{
+text-align:center;
+padding:30px 15px;
+border-right:1px solid rgba(200,169,107,.4);
+}
+
+.feature:last-child{border:0}
+
+.feature h4{
+color:var(--emerald);
+font-size:10px;
+letter-spacing:2px;
+margin-bottom:8px;
+}
+
+.feature p{
+color:#777;
+font-family:'Cormorant Garamond',serif;
+font-size:15px;
+}
+
+.reviews{
+background:var(--emerald);
+color:var(--ivory);
+padding:90px 5%;
+}
+
+.reviews-inner{
+max-width:1400px;
+margin:auto;
+}
+
+.reviews-title{
+text-align:center;
+margin-bottom:45px;
+}
+
+.reviews-title h2{
+font-family:'Bodoni Moda',serif;
+font-size:48px;
+font-weight:400;
+}
+
+.review-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+}
+
+.review{
+background:rgba(247,243,236,.07);
+border:1px solid rgba(200,169,107,.4);
+padding:30px;
+}
+
+.stars{
+color:var(--gold);
+letter-spacing:4px;
+margin-bottom:15px;
+}
+
+.review p{
+font-family:'Cormorant Garamond',serif;
+font-size:19px;
+line-height:1.5;
+}
+
+.review-name{
+color:var(--gold);
+font-size:9px;
+letter-spacing:2px;
+margin-top:20px;
+}
+
+.newsletter{
+background:#eee8de;
+text-align:center;
+padding:85px 20px;
+}
+
+.newsletter h2{
+font-family:'Bodoni Moda',serif;
+color:var(--emerald);
+font-size:44px;
+font-weight:400;
+}
+
+.newsletter p{
+font-family:'Cormorant Garamond',serif;
+font-size:18px;
+margin:12px 0 25px;
+}
+
+.newsletter-form{
+display:flex;
+max-width:500px;
+margin:auto;
+}
+
+.newsletter-form input{
+flex:1;
+padding:14px;
+border:1px solid #c9c1b5;
+background:var(--ivory);
+}
+
+.newsletter-form button{
+border:0;
+background:var(--emerald);
+color:var(--ivory);
+padding:0 23px;
+letter-spacing:2px;
+font-size:9px;
+}
+
+footer{
+background:var(--emerald);
+color:var(--ivory);
+padding:65px 6% 25px;
+}
+
+.footer-grid{
+display:grid;
+grid-template-columns:2fr 1fr 1fr 1fr;
+gap:50px;
+max-width:1400px;
+margin:auto;
+}
+
+.footer-logo{
+font-family:'Bodoni Moda',serif;
+font-size:34px;
+letter-spacing:4px;
+}
+
+.footer-brand p{
+font-family:'Cormorant Garamond',serif;
+color:#ddd5ca;
+font-size:17px;
+margin-top:15px;
+max-width:300px;
+}
+
+.footer-col h4{
+color:var(--gold);
+font-size:10px;
+letter-spacing:3px;
+margin-bottom:20px;
+}
+
+.footer-col a{
+display:block;
+color:#e7e0d6;
+text-decoration:none;
+font-family:'Cormorant Garamond',serif;
+font-size:16px;
+margin:10px 0;
+}
+
+.footer-bottom{
+border-top:1px solid rgba(200,169,107,.4);
+margin-top:50px;
+padding-top:20px;
+text-align:center;
+font-size:8px;
+letter-spacing:2px;
 }
 
 .drawer{
-  position:fixed;
-  top:0;
-  right:-520px;
-  width:min(520px,100%);
-  height:100vh;
-  background:#fff;
-  z-index:100;
-  padding:30px;
-  overflow-y:auto;
-  transition:right .3s ease;
-  box-shadow:-5px 0 30px rgba(0,0,0,.08);
+position:fixed;
+top:0;
+right:-450px;
+width:min(450px,100%);
+height:100vh;
+background:var(--ivory);
+z-index:2000;
+padding:30px;
+overflow:auto;
+transition:.4s;
+box-shadow:-10px 0 30px rgba(0,0,0,.15);
 }
 
-.drawer.open{
-  right:0;
-}
+.drawer.open{right:0}
 
 .drawer-head{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-bottom:1px solid #ddd;
-  padding-bottom:20px;
-  margin-bottom:25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+border-bottom:1px solid var(--gold);
+padding-bottom:20px;
+margin-bottom:25px;
 }
 
 .drawer-head h2{
-  font-family:Georgia,serif;
-  font-weight:400;
+font-family:'Bodoni Moda',serif;
+color:var(--emerald);
+font-size:30px;
+font-weight:400;
 }
 
 .close{
-  border:0;
-  background:none;
-  font-size:30px;
-  line-height:1;
+background:none;
+border:0;
+color:var(--emerald);
+font-size:25px;
 }
 
-/* BAG */
-
-.bag-item{
-  display:grid;
-  grid-template-columns:80px 1fr auto;
-  gap:15px;
-  padding:18px 0;
-  border-bottom:1px solid #eee;
+.cart-item{
+display:grid;
+grid-template-columns:75px 1fr;
+gap:15px;
+margin-bottom:20px;
+padding-bottom:20px;
+border-bottom:1px solid #ddd4c8;
 }
 
-.bag-item-image{
-  width:80px;
-  height:105px;
-  object-fit:cover;
+.cart-thumb{
+height:90px;
+background:#ddd;
 }
 
-.bag-item h3{
-  font-family:Georgia,serif;
-  font-size:14px;
-  line-height:1.4;
-  margin-bottom:7px;
+.cart-thumb img{
+width:100%;
+height:100%;
+object-fit:cover;
 }
 
-.bag-price{
-  font-size:12px;
-  margin-bottom:12px;
+.cart-item h4{
+font-family:'Cormorant Garamond',serif;
+color:var(--emerald);
+font-size:19px;
 }
 
-.quantity-controls{
-  display:flex;
-  align-items:center;
-  gap:10px;
+.qty{
+display:flex;
+align-items:center;
+gap:12px;
+margin-top:8px;
 }
 
-.quantity-controls button{
-  width:24px;
-  height:24px;
-  border:1px solid #ccc;
-  background:#fff;
+.qty button{
+width:23px;
+height:23px;
+background:none;
+border:1px solid var(--gold);
+color:var(--emerald);
 }
 
-.remove-btn{
-  margin-top:10px;
-  border:0;
-  background:none;
-  text-decoration:underline;
-  font-size:9px;
+.remove{
+border:0;
+background:none;
+color:#777;
+font-size:9px;
+margin-top:7px;
 }
 
-.bag-total{
-  display:flex;
-  justify-content:space-between;
-  padding:25px 0;
-  font-size:14px;
-  letter-spacing:1px;
+.total{
+border-top:1px solid var(--gold);
+margin-top:30px;
+padding-top:20px;
+display:flex;
+justify-content:space-between;
+color:var(--emerald);
+font-family:'Bodoni Moda',serif;
+font-size:23px;
 }
 
 .checkout{
-  width:100%;
-  padding:16px;
-  border:0;
-  background:#111;
-  color:#fff;
-  letter-spacing:2px;
-  font-size:11px;
+width:100%;
+background:var(--emerald);
+color:var(--ivory);
+border:0;
+padding:17px;
+margin-top:25px;
+letter-spacing:3px;
+font-size:9px;
 }
 
-.empty-message{
-  padding:50px 0;
-  text-align:center;
-  color:#777;
-  font-size:13px;
+.search-box{
+display:none;
+padding:15px 6%;
+background:#eee8de;
 }
 
-/* CHECKOUT */
+.search-box.open{display:block}
 
-.checkout-form{
-  margin-top:20px;
+.search-box input{
+width:100%;
+border:0;
+border-bottom:1px solid var(--gold);
+background:none;
+padding:12px 0;
+outline:none;
 }
+
+.product-view{
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.7);
+z-index:3000;
+display:none;
+align-items:center;
+justify-content:center;
+padding:20px;
+}
+
+.product-view.open{display:flex}
+
+.product-view-box{
+background:var(--ivory);
+width:min(1100px,100%);
+max-height:92vh;
+overflow:auto;
+padding:35px;
+position:relative;
+}
+
+.product-view-close{
+position:absolute;
+right:20px;
+top:15px;
+border:0;
+background:none;
+font-size:28px;
+color:var(--emerald);
+z-index:5;
+}
+
+.product-gallery{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.product-gallery.single{
+grid-template-columns:minmax(300px,650px);
+justify-content:center;
+}
+
+.product-gallery img{
+width:100%;
+height:520px;
+object-fit:cover;
+}
+
+.product-view-info{
+text-align:center;
+padding:30px 20px 10px;
+}
+
+.product-view-info h2{
+font-family:'Bodoni Moda',serif;
+color:var(--emerald);
+font-size:42px;
+font-weight:400;
+line-height:1.1;
+}
+
+.view-price{
+font-family:'Josefin Sans',sans-serif;
+font-size:16px;
+margin:12px 0;
+color:var(--black);
+}
+
+.view-type{
+color:var(--gold);
+font-size:10px;
+letter-spacing:3px;
+margin-bottom:18px;
+}
+
+.view-description{
+max-width:650px;
+margin:0 auto 20px;
+border-top:1px solid var(--gold);
+border-bottom:1px solid var(--gold);
+padding:20px;
+font-family:'Cormorant Garamond',serif;
+font-size:20px;
+line-height:1.7;
+color:#444;
+}
+
+.view-description strong{
+color:var(--emerald);
+font-family:'Josefin Sans',sans-serif;
+font-size:9px;
+letter-spacing:3px;
+display:block;
+margin-bottom:8px;
+}
+
+.view-add{
+max-width:350px;
+margin:10px auto 0;
+}
+
+/* =========================
+   NEW ORDER SYSTEM STYLES
+========================= */
 
 .checkout-form input,
 .checkout-form textarea{
-  width:100%;
-  margin-top:10px;
-  padding:14px;
-  border:1px solid #ccc;
-  outline:none;
-  resize:vertical;
+width:100%;
+border:1px solid #d8d0c5;
+background:#fffdf8;
+color:var(--black);
+padding:14px;
+margin-top:10px;
+outline:none;
+font-family:'Josefin Sans',sans-serif;
+font-size:11px;
+}
+
+.checkout-form textarea{
+min-height:100px;
+resize:vertical;
 }
 
 .checkout-form input:focus,
 .checkout-form textarea:focus{
-  border-color:#111;
-}
-
-.checkout-form textarea{
-  min-height:100px;
+border-color:var(--gold);
 }
 
 .payment-note{
-  margin:20px 0;
-  padding:16px;
-  background:#f5f2ee;
-  color:#555;
-  font-size:11px;
-  line-height:1.7;
+margin-top:18px;
+padding:15px;
+background:#eee8de;
+border-left:2px solid var(--gold);
+color:#555;
+font-size:10px;
+line-height:1.7;
 }
 
 .payment-note strong{
-  color:#111;
+color:var(--emerald);
+letter-spacing:1px;
 }
 
-/* CONFIRMATION */
-
 .order-success{
-  text-align:center;
+text-align:center;
 }
 
 .order-success h3{
-  font-family:Georgia,serif;
-  font-size:28px;
-  font-weight:400;
-  margin-bottom:10px;
+font-family:'Bodoni Moda',serif;
+font-size:32px;
+font-weight:400;
+color:var(--emerald);
+margin-bottom:8px;
+}
+
+.order-success > p{
+font-family:'Cormorant Garamond',serif;
+font-size:18px;
+line-height:1.5;
+color:#555;
 }
 
 .order-number{
-  display:inline-block;
-  margin:15px 0 25px;
-  padding:10px 18px;
-  background:#f5f2ee;
-  font-size:13px;
-  letter-spacing:2px;
-}
-
-.order-success p{
-  color:#666;
-  font-size:13px;
-  line-height:1.7;
+display:inline-block;
+margin:18px 0;
+padding:10px 20px;
+background:var(--gold);
+color:var(--emerald);
+font-family:'Bodoni Moda',serif;
+font-size:19px;
+letter-spacing:2px;
 }
 
 .order-summary{
-  margin:25px 0;
-  border-top:1px solid #ddd;
-  border-bottom:1px solid #ddd;
+margin:25px 0;
+border-top:1px solid var(--gold);
+border-bottom:1px solid var(--gold);
 }
 
 .order-row{
-  display:flex;
-  justify-content:space-between;
-  gap:20px;
-  padding:13px 0;
-  border-bottom:1px solid #eee;
-  font-size:11px;
-  text-align:left;
+display:flex;
+justify-content:space-between;
+gap:15px;
+padding:12px 0;
+border-bottom:1px solid #ddd4c8;
+font-size:10px;
+line-height:1.5;
+text-align:left;
 }
 
 .order-row:last-child{
-  border-bottom:0;
+border-bottom:0;
 }
 
 .order-total{
-  display:flex;
-  justify-content:space-between;
-  padding:18px 0;
-  font-size:13px;
-  font-weight:bold;
+display:flex;
+justify-content:space-between;
+padding:16px 0;
+font-family:'Bodoni Moda',serif;
+font-size:19px;
+color:var(--emerald);
 }
 
 .order-actions{
-  display:grid;
-  gap:10px;
+display:grid;
+gap:10px;
 }
 
 .order-actions button{
-  width:100%;
-  padding:14px;
-  border:1px solid #111;
-  background:#111;
-  color:#fff;
-  font-size:10px;
-  letter-spacing:1px;
+width:100%;
+padding:14px;
+border:1px solid var(--emerald);
+background:var(--emerald);
+color:var(--ivory);
+font-size:9px;
+letter-spacing:2px;
+}
+
+.order-actions button:hover{
+background:var(--gold);
+border-color:var(--gold);
+color:var(--emerald);
 }
 
 .order-actions .secondary-btn{
-  background:#fff;
-  color:#111;
+background:transparent;
+color:var(--emerald);
 }
 
-.order-actions .whatsapp-btn{
-  background:#111;
+.order-actions .secondary-btn:hover{
+background:var(--gold);
 }
-
-/* ACCOUNT */
 
 .account-tabs{
-  display:flex;
-  border-bottom:1px solid #ddd;
-  margin-bottom:25px;
+display:flex;
+border-bottom:1px solid var(--gold);
+margin-bottom:25px;
 }
 
 .account-tab{
-  flex:1;
-  border:0;
-  background:none;
-  padding:14px 5px;
-  font-size:10px;
-  letter-spacing:1px;
-  border-bottom:2px solid transparent;
+flex:1;
+border:0;
+background:none;
+color:var(--emerald);
+padding:13px 5px;
+font-size:9px;
+letter-spacing:2px;
+border-bottom:2px solid transparent;
 }
 
 .account-tab.active{
-  border-bottom-color:#111;
+border-bottom-color:var(--gold);
 }
 
 .account-panel{
-  display:none;
+display:none;
 }
 
 .account-panel.active{
-  display:block;
+display:block;
 }
 
-.login-box{
-  padding:25px 0;
-}
-
-.login-box p{
-  color:#666;
-  line-height:1.7;
-  font-size:12px;
+.account-message{
+font-family:'Cormorant Garamond',serif;
+font-size:18px;
+line-height:1.6;
+color:#555;
 }
 
 .saved-order{
-  border:1px solid #ddd;
-  padding:18px;
-  margin-bottom:15px;
+border:1px solid #ddd4c8;
+padding:18px;
+margin-bottom:15px;
+background:#fffdf8;
 }
 
 .saved-order-header{
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  margin-bottom:10px;
+display:flex;
+justify-content:space-between;
+align-items:start;
+gap:10px;
+border-bottom:1px solid var(--gold);
+padding-bottom:10px;
+margin-bottom:10px;
 }
 
 .saved-order-number{
-  font-family:Georgia,serif;
-  font-size:17px;
+font-family:'Bodoni Moda',serif;
+font-size:18px;
+color:var(--emerald);
 }
 
 .saved-order-meta{
-  font-size:10px;
-  color:#777;
-  line-height:1.6;
+font-size:8px;
+letter-spacing:1px;
+color:#777;
+line-height:1.6;
 }
 
 .saved-order-items{
-  border-top:1px solid #eee;
-  border-bottom:1px solid #eee;
-  margin:12px 0;
-  padding:10px 0;
+border-bottom:1px solid #ddd4c8;
+padding:10px 0;
+margin-bottom:10px;
 }
 
 .saved-order-item{
-  display:flex;
-  justify-content:space-between;
-  gap:10px;
-  padding:5px 0;
-  font-size:11px;
+display:flex;
+justify-content:space-between;
+gap:10px;
+font-size:9px;
+line-height:1.5;
+padding:5px 0;
 }
 
 .saved-order-total{
-  display:flex;
-  justify-content:space-between;
-  font-size:12px;
-  font-weight:bold;
+display:flex;
+justify-content:space-between;
+font-family:'Bodoni Moda',serif;
+font-size:17px;
+color:var(--emerald);
 }
 
 .empty-orders{
-  text-align:center;
-  padding:40px 10px;
-  color:#777;
-  font-size:12px;
+text-align:center;
+padding:35px 10px;
+font-family:'Cormorant Garamond',serif;
+font-size:19px;
+color:#777;
 }
 
-/* FOOTER */
-
-footer{
-  border-top:1px solid #ddd;
-  padding:50px 30px;
+.confirmation-note{
+margin:20px 0;
+padding:15px;
+background:#eee8de;
+font-size:9px;
+line-height:1.7;
+color:#555;
 }
 
-.footer-inner{
-  max-width:1400px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  gap:30px;
+@media(max-width:1000px){
+
+.header-main{
+grid-template-columns:1fr auto;
 }
 
-.footer-brand{
-  font-family:Georgia,serif;
-  font-size:22px;
+.nav{
+grid-column:1/-1;
+grid-row:auto;
+flex-wrap:wrap;
 }
 
-.footer-info{
-  font-size:11px;
-  line-height:2;
-  color:#555;
+.products{
+grid-template-columns:repeat(2,1fr);
 }
 
-/* RESPONSIVE */
-
-@media(max-width:900px){
-  .nav{
-    padding:15px 18px;
-  }
-
-  .nav-links{
-    display:none;
-  }
-
-  .product-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:18px;
-  }
-
-  section{
-    padding:55px 18px;
-  }
+.editorial{
+grid-template-columns:1fr;
 }
 
-@media(max-width:600px){
-  .logo{
-    font-size:18px;
-  }
+.review-grid{
+grid-template-columns:1fr;
+}
 
-  .logo span{
-    font-size:7px;
-  }
+.footer-grid{
+grid-template-columns:1fr 1fr;
+}
 
-  .hero{
-    min-height:450px;
-  }
+}
 
-  .section-heading{
-    display:block;
-  }
+@media(max-width:650px){
 
-  .section-heading h2{
-    margin-bottom:8px;
-  }
+.header-main{
+padding:15px;
+}
 
-  .product-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+.logo-mark{
+width:48px;
+height:48px;
+}
 
-  .product-name{
-    font-size:14px;
-  }
+.logo-mark:before{
+width:36px;
+height:36px;
+}
 
-  .product-buttons{
-    display:block;
-  }
+.logo-main{
+font-size:18px;
+}
 
-  .add-btn,
-  .view-btn{
-    width:100%;
-    margin-top:5px;
-  }
+.header-actions{
+gap:8px;
+}
 
-  .drawer{
-    padding:22px;
-  }
+.text-action{
+display:none;
+}
 
-  .footer-inner{
-    display:block;
-  }
+.nav{
+gap:10px;
+}
 
-  .footer-info{
-    margin-top:20px;
-  }
+.nav a{
+font-size:8px;
+}
+
+.hero{
+min-height:600px;
+}
+
+.hero h1{
+font-size:65px;
+}
+
+.products{
+grid-template-columns:1fr 1fr;
+gap:10px;
+}
+
+.product-image{
+height:270px;
+}
+
+.product-info{
+padding:12px;
+}
+
+.product-info h3{
+font-size:18px;
+}
+
+.features{
+grid-template-columns:1fr 1fr;
+}
+
+.review-grid{
+grid-template-columns:1fr;
+}
+
+.footer-grid{
+grid-template-columns:1fr;
+}
+
+.product-gallery{
+grid-template-columns:1fr;
+}
+
+.product-gallery.single{
+grid-template-columns:1fr;
+}
+
+.product-gallery img{
+height:400px;
+}
+
+.product-view-box{
+padding:20px;
+}
+
+.product-view-info h2{
+font-size:32px;
+}
+
 }
 </style>
 </head>
 
 <body>
 
+<div class="top-bar">
+✦ THE LANGUAGE OF LUXURY ✦
+</div>
+
 <header>
-  <div class="nav">
 
-    <div class="nav-links">
-      <a href="#new">NEW IN</a>
-      <a href="#unstitched">UNSTITCHED</a>
-      <a href="#best">BEST SELLERS</a>
-    </div>
+<div class="header-main">
 
-    <a href="#" class="logo">
-      ZJ FASHION
-      <span>ZAHIDA JAVED</span>
-    </a>
+<a href="#" class="logo">
 
-    <div class="nav-actions">
-      <button class="nav-button" onclick="openAccount()">ACCOUNT</button>
-      <button class="nav-button" onclick="openBag()">
-        BAG <span class="bag-count" id="bagCount">0</span>
-      </button>
-    </div>
+<div class="logo-mark">
+<span class="logo-zj">ZJ</span>
+</div>
 
-  </div>
+<div>
+<span class="logo-main">FASHION</span>
+<span class="logo-sub">ZAHIDA JAVED</span>
+</div>
+
+</a>
+
+
+<div class="header-actions">
+
+<button class="icon-btn" onclick="toggleSearch()" aria-label="Search">
+
+<svg class="icon" viewBox="0 0 24 24">
+<circle cx="11" cy="11" r="6.5"></circle>
+<path d="M16 16l5 5"></path>
+</svg>
+
+</button>
+
+
+<button class="icon-btn" onclick="openFavourites()" aria-label="Favourites">
+
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M20.8 8.7c0 5.2-8.8 10.1-8.8 10.1S3.2 13.9 3.2 8.7A4.7 4.7 0 0 1 12 6.4a4.7 4.7 0 0 1 8.8 2.3z"></path>
+</svg>
+
+<span class="text-action">FAVOURITES</span>
+
+</button>
+
+
+<button class="icon-btn text-action" onclick="openAccount()">
+SIGN UP / LOG IN
+</button>
+
+
+<button class="icon-btn" onclick="openBag()" aria-label="Bag">
+
+<svg class="icon" viewBox="0 0 24 24">
+<path d="M5 8h14l-1 13H6L5 8z"></path>
+<path d="M9 8V6a3 3 0 0 1 6 0v2"></path>
+</svg>
+
+<span class="text-action">BAG</span>
+
+<span class="bag-number" id="bagCount">0</span>
+
+</button>
+
+</div>
+
+
+<nav class="nav">
+
+<a href="#new">NEW IN</a>
+
+<a href="#unstitched">UNSTITCHED</a>
+
+<a href="#collections">COLLECTIONS</a>
+
+<a href="#bestsellers">BEST SELLERS</a>
+
+<a href="#reviews">REVIEWS</a>
+
+</nav>
+
+</div>
+
+
+<div class="search-box" id="searchBox">
+
+<input
+placeholder="SEARCH ZJ FASHION..."
+onkeyup="searchProducts(this.value)"
+>
+
+</div>
+
 </header>
 
 
 <section class="hero">
-  <div class="hero-inner">
-    <small>ZAHIDA JAVED</small>
 
-    <h1>ZJ FASHION</h1>
+<div class="hero-content">
 
-    <p>
-      Discover refined Pakistani fashion, beautifully embroidered
-      unstitched collections and timeless designs created for
-      effortless elegance.
-    </p>
+<div class="hero-present">
+ZAHIDA JAVED PRESENTS
+</div>
 
-    <a href="#new" class="hero-btn">SHOP COLLECTION</a>
-  </div>
+<h1>
+ZJ<br>FASHION
+</h1>
+
+<div class="hero-line"></div>
+
+<div class="hero-slogan">
+THE LANGUAGE OF LUXURY
+</div>
+
+<button
+class="hero-button"
+onclick="document.getElementById('new').scrollIntoView()"
+>
+SHOP THE COLLECTION
+</button>
+
+</div>
+
 </section>
 
 
-<section id="new">
-  <div class="section-heading">
-    <div>
-      <h2>New In</h2>
-      <p>LATEST ARRIVALS</p>
-    </div>
-  </div>
+<section class="section" id="new">
 
-  <div class="product-grid" id="newGrid"></div>
+<div class="section-heading">
+
+<div class="eyebrow">
+THE NEW EDIT
+</div>
+
+<h2>
+New Arrivals
+</h2>
+
+<div class="gold-line"></div>
+
+</div>
+
+<div class="products" id="productGrid"></div>
+
 </section>
 
 
-<section id="unstitched">
-  <div class="section-heading">
-    <div>
-      <h2>Unstitched</h2>
-      <p>THE ZJ COLLECTION</p>
-    </div>
-  </div>
+<section class="editorial" id="collections">
 
-  <div class="product-grid" id="unstitchedGrid"></div>
+<div class="editorial-image"></div>
+
+<div class="editorial-content">
+
+<div>
+
+<div class="eyebrow">
+ZJ COLLECTIONS
+</div>
+
+<h2>
+Luxury,<br>reimagined.
+</h2>
+
+<p>
+Discover refined Pakistani unstitched collections,
+where intricate embroidery meets timeless elegance.
+</p>
+
+<button
+class="outline-btn"
+onclick="document.getElementById('unstitched').scrollIntoView()"
+>
+EXPLORE COLLECTION
+</button>
+
+</div>
+
+</div>
+
 </section>
 
 
-<section id="best">
-  <div class="section-heading">
-    <div>
-      <h2>Best Sellers</h2>
-      <p>JOHRA MAHJABEEN</p>
-    </div>
-  </div>
+<section class="section" id="unstitched">
 
-  <div class="product-grid" id="bestGrid"></div>
+<div class="section-heading">
+
+<div class="eyebrow">
+THE FABRIC EDIT
+</div>
+
+<h2>
+Unstitched Luxury
+</h2>
+
+<div class="gold-line"></div>
+
+</div>
+
+<div class="products" id="unstitchedGrid"></div>
+
 </section>
 
 
-<section class="about">
-  <div class="about-inner">
-    <h2>ZJ Fashion</h2>
+<section class="section" id="bestsellers">
 
-    <p>
-      Zahida Javed presents a collection of sophisticated Pakistani
-      fashion designed with attention to embroidery, fabric and detail.
-      From elegant unstitched ensembles to statement pieces, each design
-      reflects timeless style and contemporary luxury.
-    </p>
-  </div>
+<div class="section-heading">
+
+<div class="eyebrow">
+MOST LOVED
+</div>
+
+<h2>
+Best Sellers
+</h2>
+
+<div class="gold-line"></div>
+
+</div>
+
+<div class="products" id="bestSellerGrid"></div>
+
+</section>
+
+
+<section class="reviews" id="reviews">
+
+<div class="reviews-inner">
+
+<div class="reviews-title">
+
+<div class="eyebrow">
+ZJ WOMEN
+</div>
+
+<h2>
+Customer Reviews
+</h2>
+
+<div class="gold-line"></div>
+
+</div>
+
+
+<div class="review-grid">
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“The detailing is beautiful and the quality feels incredibly luxurious.”
+</p>
+
+<div class="review-name">
+AMNA · VERIFIED PURCHASE
+</div>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Absolutely loved the outfit. The fit and finishing were perfect.”
+</p>
+
+<div class="review-name">
+HIBA · VERIFIED PURCHASE
+</div>
+
+</div>
+
+
+<div class="review">
+
+<div class="stars">
+★★★★★
+</div>
+
+<p>
+“Elegant, timeless and even more beautiful in person.”
+</p>
+
+<div class="review-name">
+SANA · VERIFIED PURCHASE
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<div class="features">
+
+<div class="feature">
+
+<h4>WORLDWIDE DELIVERY</h4>
+
+<p>
+Luxury delivered to your door.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h4>SECURE SHOPPING</h4>
+
+<p>
+Your details stay protected.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h4>EASY RETURNS</h4>
+
+<p>
+Simple and convenient returns.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<h4>TIMELESS DESIGN</h4>
+
+<p>
+Pieces made beyond seasons.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="newsletter">
+
+<div class="eyebrow">
+ZJ JOURNAL
+</div>
+
+<h2>
+Enter the world of ZJ
+</h2>
+
+<p>
+Be the first to discover new collections and exclusive edits.
+</p>
+
+<form
+class="newsletter-form"
+onsubmit="subscribe(event)"
+>
+
+<input
+type="email"
+placeholder="YOUR EMAIL ADDRESS"
+required
+>
+
+<button>
+SUBSCRIBE
+</button>
+
+</form>
+
 </section>
 
 
 <footer>
-  <div class="footer-inner">
 
-    <div class="footer-brand">
-      ZJ FASHION
-    </div>
+<div class="footer-grid">
 
-    <div class="footer-info">
-      ZAHIDA JAVED<br>
-      Email: zjfashion@hotmail.com<br>
-      WhatsApp: +92 312 0600230
-    </div>
+<div class="footer-brand">
 
-  </div>
+<div class="footer-logo">
+ZJ FASHION
+</div>
+
+<p>
+Zahida Javed presents a modern expression of Pakistani luxury,
+where tradition meets contemporary elegance.
+</p>
+
+</div>
+
+
+<div class="footer-col">
+
+<h4>SHOP</h4>
+
+<a href="#new">New In</a>
+
+<a href="#unstitched">Unstitched</a>
+
+<a href="#bestsellers">Best Sellers</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h4>HELP</h4>
+
+<a href="#">Contact Us</a>
+
+<a href="#">Delivery</a>
+
+<a href="#">Returns</a>
+
+<a href="#">Size Guide</a>
+
+</div>
+
+
+<div class="footer-col">
+
+<h4>ACCOUNT</h4>
+
+<a href="#" onclick="openAccount();return false;">
+Sign Up
+</a>
+
+<a href="#" onclick="openAccount();return false;">
+Log In
+</a>
+
+<a href="#" onclick="openFavourites();return false;">
+Favourites
+</a>
+
+<a href="#" onclick="openBag();return false;">
+My Bag
+</a>
+
+</div>
+
+</div>
+
+
+<div class="footer-bottom">
+
+© 2026 ZJ FASHION · ZAHIDA JAVED · THE LANGUAGE OF LUXURY
+
+</div>
+
 </footer>
-
-
-<!-- OVERLAY -->
-
-<div class="drawer-overlay" id="drawerOverlay" onclick="closeAllDrawers()"></div>
 
 
 <!-- BAG -->
 
 <div class="drawer" id="bagDrawer">
 
-  <div class="drawer-head">
-    <h2>Your Bag</h2>
-    <button class="close" onclick="closeBag()">×</button>
-  </div>
+<div class="drawer-head">
 
-  <div id="bagItems"></div>
+<h2>
+Your Bag
+</h2>
 
-  <div id="bagFooter"></div>
+<button
+class="close"
+onclick="closeBag()"
+>
+×
+</button>
+
+</div>
+
+<div id="cartItems">
+<p>Your bag is currently empty.</p>
+</div>
+
+<div class="total">
+
+<span>
+TOTAL
+</span>
+
+<span id="totalPrice">
+PKR 0
+</span>
+
+</div>
+
+<button
+class="checkout"
+onclick="openCheckout()"
+>
+PROCEED TO CHECKOUT
+</button>
 
 </div>
 
 
-<!-- CHECKOUT -->
+<!-- FAVOURITES -->
 
-<div class="drawer" id="checkoutDrawer">
+<div class="drawer" id="favouriteDrawer">
 
-  <div class="drawer-head">
-    <h2>Checkout</h2>
-    <button class="close" onclick="closeCheckout()">×</button>
-  </div>
+<div class="drawer-head">
 
-  <p style="color:#666;font-size:12px;line-height:1.7;">
-    Enter your delivery details below.
-  </p>
+<h2>
+Favourites
+</h2>
 
-  <form class="checkout-form" id="checkoutForm" onsubmit="placeOrder(event)">
-
-    <input
-      id="customerName"
-      type="text"
-      placeholder="FULL NAME"
-      required
-    >
-
-    <input
-      id="customerEmail"
-      type="email"
-      placeholder="EMAIL ADDRESS"
-      required
-    >
-
-    <input
-      id="customerPhone"
-      type="tel"
-      placeholder="PHONE NUMBER"
-      required
-    >
-
-    <textarea
-      id="customerAddress"
-      placeholder="DELIVERY ADDRESS"
-      required
-    ></textarea>
-
-    <input
-      id="customerPostcode"
-      type="text"
-      placeholder="POSTCODE"
-      required
-    >
-
-    <input
-      id="customerCountry"
-      type="text"
-      placeholder="COUNTRY"
-      required
-    >
-
-    <div class="payment-note">
-      <strong>PAYMENT:</strong><br>
-      No online payment is taken here. After you place your order,
-      ZJ Fashion will contact you to arrange payment separately.
-    </div>
-
-    <button class="checkout" type="submit">
-      PLACE ORDER
-    </button>
-
-  </form>
+<button
+class="close"
+onclick="closeFavourites()"
+>
+×
+</button>
 
 </div>
 
+<div id="favouritesList">
 
-<!-- ORDER CONFIRMATION -->
+<p>
+You haven't saved anything yet.
+</p>
 
-<div class="drawer" id="confirmationDrawer">
-
-  <div class="drawer-head">
-    <h2>Order Confirmed</h2>
-    <button class="close" onclick="closeConfirmation()">×</button>
-  </div>
-
-  <div id="confirmationContent"></div>
+</div>
 
 </div>
 
@@ -960,60 +1742,271 @@ footer{
 
 <div class="drawer" id="accountDrawer">
 
-  <div class="drawer-head">
-    <h2>Account</h2>
-    <button class="close" onclick="closeAccount()">×</button>
-  </div>
+<div class="drawer-head">
 
-  <div class="account-tabs">
+<h2>
+Welcome to ZJ
+</h2>
 
-    <button
-      class="account-tab active"
-      id="loginTab"
-      onclick="showAccountPanel('login')"
-    >
-      ACCOUNT
-    </button>
+<button
+class="close"
+onclick="closeAccount()"
+>
+×
+</button>
 
-    <button
-      class="account-tab"
-      id="ordersTab"
-      onclick="showAccountPanel('orders')"
-    >
-      YOUR ORDERS
-    </button>
-
-  </div>
+</div>
 
 
-  <div class="account-panel active" id="loginPanel">
+<div class="account-tabs">
 
-    <div class="login-box">
+<button
+class="account-tab active"
+id="accountTab"
+onclick="showAccountPanel('account')"
+>
+ACCOUNT
+</button>
 
-      <h3 style="font-family:Georgia,serif;font-weight:400;margin-bottom:15px;">
-        Welcome to ZJ Fashion
-      </h3>
+<button
+class="account-tab"
+id="ordersTab"
+onclick="showAccountPanel('orders')"
+>
+YOUR ORDERS
+</button>
 
-      <p>
-        Your orders placed on this browser are saved automatically.
-        You do not need to create an account to place an order.
-      </p>
-
-      <p style="margin-top:15px;">
-        Select <strong>YOUR ORDERS</strong> above to view your previous
-        orders on this device.
-      </p>
-
-    </div>
-
-  </div>
+</div>
 
 
-  <div class="account-panel" id="ordersPanel">
+<div
+class="account-panel active"
+id="accountPanel"
+>
 
-    <div id="ordersList"></div>
+<p class="account-message">
+Create an account or log in to view your orders,
+favourites and details.
+</p>
 
-  </div>
+<input
+placeholder="EMAIL ADDRESS"
+style="width:100%;margin-top:25px;padding:14px"
+>
+
+<input
+type="password"
+placeholder="PASSWORD"
+style="width:100%;margin-top:12px;padding:14px"
+>
+
+<button
+class="checkout"
+onclick="demoLogin()"
+>
+SIGN UP / LOG IN
+</button>
+
+<p
+style="font-size:9px;color:#777;margin-top:15px;line-height:1.6"
+>
+Your orders can also be viewed under YOUR ORDERS
+on this device without creating an account.
+</p>
+
+</div>
+
+
+<div
+class="account-panel"
+id="ordersPanel"
+>
+
+<div id="ordersList"></div>
+
+</div>
+
+</div>
+
+
+<!-- CHECKOUT -->
+
+<div class="drawer" id="checkoutDrawer">
+
+<div class="drawer-head">
+
+<h2>
+Checkout
+</h2>
+
+<button
+class="close"
+onclick="closeCheckout()"
+>
+×
+</button>
+
+</div>
+
+
+<p
+style="font-family:'Cormorant Garamond',serif;font-size:18px;color:#555;line-height:1.5"
+>
+Enter your delivery details below.
+</p>
+
+
+<form
+class="checkout-form"
+id="checkoutForm"
+onsubmit="placeOrder(event)"
+>
+
+
+<input
+id="customerName"
+type="text"
+placeholder="FULL NAME"
+required
+>
+
+
+<input
+id="customerEmail"
+type="email"
+placeholder="EMAIL ADDRESS"
+required
+>
+
+
+<input
+id="customerPhone"
+type="tel"
+placeholder="PHONE NUMBER"
+required
+>
+
+
+<textarea
+id="customerAddress"
+placeholder="DELIVERY ADDRESS"
+required
+></textarea>
+
+
+<input
+id="customerPostcode"
+type="text"
+placeholder="POSTCODE"
+required
+>
+
+
+<input
+id="customerCountry"
+type="text"
+placeholder="COUNTRY"
+required
+>
+
+
+<div class="payment-note">
+
+<strong>
+PAYMENT
+</strong>
+
+<br>
+
+No online payment is taken here.
+After you place your order, ZJ Fashion will contact
+you to arrange payment separately.
+
+</div>
+
+
+<button
+class="checkout"
+type="submit"
+>
+PLACE ORDER
+</button>
+
+</form>
+
+</div>
+
+
+<!-- ORDER CONFIRMATION -->
+
+<div class="drawer" id="confirmationDrawer">
+
+<div class="drawer-head">
+
+<h2>
+Order Confirmed
+</h2>
+
+<button
+class="close"
+onclick="closeConfirmation()"
+>
+×
+</button>
+
+</div>
+
+<div id="confirmationContent"></div>
+
+</div>
+
+
+<!-- PRODUCT VIEW -->
+
+<div class="product-view" id="productView">
+
+<div class="product-view-box">
+
+<button
+class="product-view-close"
+onclick="closeProduct()"
+>
+×
+</button>
+
+<div
+class="product-gallery"
+id="productGallery"
+></div>
+
+<div class="product-view-info">
+
+<h2 id="viewName"></h2>
+
+<div
+class="view-price"
+id="viewPrice"
+></div>
+
+<div class="view-type">
+UNSTITCHED
+</div>
+
+<div
+class="view-description"
+id="viewDescription"
+></div>
+
+<button
+class="add-btn view-add"
+id="viewAdd"
+>
+ADD TO BAG
+</button>
+
+</div>
+
+</div>
 
 </div>
 
@@ -1021,12 +2014,11 @@ footer{
 <script>
 
 /* =========================================================
-   SHOP SETTINGS
+   SHOP DETAILS
 ========================================================= */
 
 const SHOP_WHATSAPP = "923120600230";
 const SHOP_EMAIL = "zjfashion@hotmail.com";
-
 const ORDERS_STORAGE_KEY = "zjFashionOrders";
 
 
@@ -1036,578 +2028,744 @@ const ORDERS_STORAGE_KEY = "zjFashionOrders";
 
 const products = [
 
-  {
-    name:"9169 - 3Pcs unstitched ZESH embroidered khaddar",
-    price:"PKR 5,000",
-    type:"UNSTITCHED · 3PCS · ZESH",
-    photo1:"image1.jpeg",
-    photo2:"",
-    badge:"NEW IN",
-    category:"new",
-    description:""
-  },
+{
+name:"9169 - 3Pcs unstitched ZESH embroidered khaddar",
+price:"PKR 5,000",
+type:"UNSTITCHED · 3PCS · ZESH",
+photo1:"image1.jpeg",
+photo2:"",
+badge:"NEW IN",
+category:"new",
+description:""
+},
 
-  {
-    name:"9167 - 3Pcs unstitched ZESH embroidered khaddar",
-    price:"PKR 5,000",
-    type:"UNSTITCHED · 3PCS · ZESH",
-    photo1:"image0.jpeg",
-    photo2:"",
-    badge:"NEW IN",
-    category:"new",
-    description:""
-  },
+{
+name:"9167 - 3Pcs unstitched ZESH embroidered khaddar",
+price:"PKR 5,000",
+type:"UNSTITCHED · 3PCS · ZESH",
+photo1:"image0.jpeg",
+photo2:"",
+badge:"NEW IN",
+category:"new",
+description:""
+},
 
-  {
-    name:"9171-3Pcs unstitched ZESH embroidered khaddar",
-    price:"PKR 5,000",
-    type:"UNSTITCHED · 3PCS · ZESH",
-    photo1:"image2.jpeg",
-    photo2:"",
-    badge:"NEW IN",
-    category:"new",
-    description:""
-  },
+{
+name:"9171-3Pcs unstitched ZESH embroidered khaddar",
+price:"PKR 5,000",
+type:"UNSTITCHED · 3PCS · ZESH",
+photo1:"image2.jpeg",
+photo2:"",
+badge:"NEW IN",
+category:"new",
+description:""
+},
 
-  {
-    name:"9169 3Pcs unstitched ZESH embroidered khaddar",
-    price:"PKR 5,000",
-    type:"UNSTITCHED · 3PCS · ZESH",
-    photo1:"image3.jpeg",
-    photo2:"",
-    badge:"NEW IN",
-    category:"new",
-    description:""
-  },
+{
+name:"9169 3Pcs unstitched ZESH embroidered khaddar",
+price:"PKR 5,000",
+type:"UNSTITCHED · 3PCS · ZESH",
+photo1:"image3.jpeg",
+photo2:"",
+badge:"NEW IN",
+category:"new",
+description:""
+},
 
-  {
-    name:"JW-115 - Johra MAHJABEEN- unstitched",
-    price:"PKR 7,500",
-    type:"UNSTITCHED · JOHRA MAHJABEEN",
-    photo1:"image4.jpeg",
-    photo2:"image17.png",
-    badge:"COLLECTION",
-    category:"best",
-    description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupatta<br>Plain trouser"
-  },
+{
+name:"JW-115 - Johra MAHJABEEN- unstitched",
+price:"PKR 7,500",
+type:"UNSTITCHED · JOHRA MAHJABEEN",
+photo1:"image4.jpeg",
+photo2:"image17.png",
+badge:"COLLECTION",
+category:"best",
+description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupatta<br>Plain trouser"
+},
 
-  {
-    name:"JW118 Johra MAHJABEEN- unstitched",
-    price:"PKR 7,500",
-    type:"UNSTITCHED · JOHRA MAHJABEEN",
-    photo1:"image5.jpeg",
-    photo2:"image15.jpeg",
-    badge:"COLLECTION",
-    category:"best",
-    description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupatta<br>Plain trouser"
-  },
+{
+name:"JW118 Johra MAHJABEEN- unstitched",
+price:"PKR 7,500",
+type:"UNSTITCHED · JOHRA MAHJABEEN",
+photo1:"image5.jpeg",
+photo2:"image15.jpeg",
+badge:"COLLECTION",
+category:"best",
+description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupatta<br>Plain trouser"
+},
 
-  {
-    name:"JW114 - Johra MAHJABEEN-unstitched",
-    price:"PKR 7,500",
-    type:"UNSTITCHED · JOHRA MAHJABEEN",
-    photo1:"image6.jpeg",
-    photo2:"image16.jpeg",
-    badge:"COLLECTION",
-    category:"best",
-    description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupatta<br>Plain trouser"
-  },
+{
+name:"JW114 - Johra MAHJABEEN-unstitched",
+price:"PKR 7,500",
+type:"UNSTITCHED · JOHRA MAHJABEEN",
+photo1:"image6.jpeg",
+photo2:"image16.jpeg",
+badge:"COLLECTION",
+category:"best",
+description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupatta<br>Plain trouser"
+},
 
-  {
-    name:"JW116 - Johra MAHJABEEN-unstitched",
-    price:"PKR 7,500",
-    type:"UNSTITCHED · JOHRA MAHJABEEN",
-    photo1:"image7.jpeg",
-    photo2:"image14.jpeg",
-    badge:"COLLECTION",
-    category:"best",
-    description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupatta<br>Plain trouser"
-  },
+{
+name:"JW116 - Johra MAHJABEEN-unstitched",
+price:"PKR 7,500",
+type:"UNSTITCHED · JOHRA MAHJABEEN",
+photo1:"image7.jpeg",
+photo2:"image14.jpeg",
+badge:"COLLECTION",
+category:"best",
+description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupatta<br>Plain trouser"
+},
 
-  {
-    name:"JW053 - Johra MAHJABEEN- unstitched",
-    price:"PKR 7,500",
-    type:"UNSTITCHED · JOHRA MAHJABEEN",
-    photo1:"image8.jpeg",
-    photo2:"image11.jpeg",
-    badge:"COLLECTION",
-    category:"best",
-    description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupatta<br>Plain trouser"
-  },
+{
+name:"JW053 - Johra MAHJABEEN- unstitched",
+price:"PKR 7,500",
+type:"UNSTITCHED · JOHRA MAHJABEEN",
+photo1:"image8.jpeg",
+photo2:"image11.jpeg",
+badge:"COLLECTION",
+category:"best",
+description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupatta<br>Plain trouser"
+},
 
-  {
-    name:"JW054 - Johra MAHJABEEN- unstitched",
-    price:"PKR 7,500",
-    type:"UNSTITCHED · JOHRA MAHJABEEN",
-    photo1:"image9.jpeg",
-    photo2:"image12.jpeg",
-    badge:"COLLECTION",
-    category:"best",
-    description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupata<br>Plain trouser"
-  },
+{
+name:"JW054 - Johra MAHJABEEN- unstitched",
+price:"PKR 7,500",
+type:"UNSTITCHED · JOHRA MAHJABEEN",
+photo1:"image9.jpeg",
+photo2:"image12.jpeg",
+badge:"COLLECTION",
+category:"best",
+description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupata<br>Plain trouser"
+},
 
-  {
-    name:"JW119 - Johra MAHJABEEN- unstitched",
-    price:"PKR 7,500",
-    type:"UNSTITCHED · JOHRA MAHJABEEN",
-    photo1:"image10.jpeg",
-    photo2:"image13.jpeg",
-    badge:"COLLECTION",
-    category:"best",
-    description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupatta<br>Plain trouser"
-  }
+{
+name:"JW119 - Johra MAHJABEEN- unstitched",
+price:"PKR 7,500",
+type:"UNSTITCHED · JOHRA MAHJABEEN",
+photo1:"image10.jpeg",
+photo2:"image13.jpeg",
+badge:"COLLECTION",
+category:"best",
+description:"Luxury embroidered resham karandi shirt<br>Luxury embroidered bamber chiffon dupatta<br>Plain trouser"
+}
 
 ];
+
+
+let bag=[];
+let favourites=[];
+let currentOrder=null;
+
+
+/* =========================================================
+   PRODUCTS
+========================================================= */
+
+function renderProducts(){
+
+const newGrid=document.getElementById("productGrid");
+const unstitchedGrid=document.getElementById("unstitchedGrid");
+const bestGrid=document.getElementById("bestSellerGrid");
+
+newGrid.innerHTML="";
+unstitchedGrid.innerHTML="";
+bestGrid.innerHTML="";
+
+
+products.forEach((product,index)=>{
+
+const card=`
+
+<article
+class="product"
+data-name="${product.name.toLowerCase()}"
+>
+
+<div class="product-image">
+
+${product.badge ?
+`<span class="product-badge">${product.badge}</span>`
+:
+""}
+
+<button
+class="product-heart"
+onclick="addFavourite(${index})"
+>
+♡
+</button>
+
+<img
+src="${product.photo1}"
+alt="${product.name}"
+onclick="openProduct(${index})"
+>
+
+</div>
+
+
+<div class="product-info">
+
+<h3>
+${product.name}
+</h3>
+
+<div class="product-type">
+${product.type}
+</div>
+
+<div class="price">
+${product.price}
+</div>
+
+<div class="product-details">
+UNSTITCHED
+</div>
+
+<button
+class="add-btn"
+onclick="addToBag(${index})"
+>
+ADD TO BAG
+</button>
+
+</div>
+
+</article>
+
+`;
+
+
+newGrid.innerHTML+=card;
+
+unstitchedGrid.innerHTML+=card;
+
+if(product.category==="best"){
+bestGrid.innerHTML+=card;
+}
+
+});
+
+}
+
+
+/* =========================================================
+   PRODUCT VIEW
+========================================================= */
+
+function openProduct(index){
+
+const product=products[index];
+
+document.getElementById("viewName").textContent=
+product.name;
+
+document.getElementById("viewPrice").textContent=
+product.price;
+
+
+const description=
+document.getElementById("viewDescription");
+
+
+if(product.description){
+
+description.innerHTML=
+"<strong>PRODUCT DETAILS</strong>"+
+product.description;
+
+description.style.display="block";
+
+}else{
+
+description.style.display="none";
+
+}
+
+
+const gallery=
+document.getElementById("productGallery");
+
+
+if(product.photo2){
+
+gallery.classList.remove("single");
+
+gallery.innerHTML=`
+
+<img
+src="${product.photo1}"
+alt="${product.name}"
+>
+
+<img
+src="${product.photo2}"
+alt="${product.name} second view"
+>
+
+`;
+
+}else{
+
+gallery.classList.add("single");
+
+gallery.innerHTML=`
+
+<img
+src="${product.photo1}"
+alt="${product.name}"
+>
+
+`;
+
+}
+
+
+document.getElementById("viewAdd").onclick=function(){
+
+addToBag(index);
+
+closeProduct();
+
+};
+
+
+document
+.getElementById("productView")
+.classList.add("open");
+
+}
+
+
+function closeProduct(){
+
+document
+.getElementById("productView")
+.classList.remove("open");
+
+}
 
 
 /* =========================================================
    BAG
 ========================================================= */
 
-let bag = [];
-let favourites = [];
-let currentOrder = null;
-
-
-/* =========================================================
-   PRICE
-========================================================= */
-
-function priceOf(product){
-
-  return parseInt(
-    product.price.replace(/[^\d]/g,""),
-    10
-  ) || 0;
-
-}
-
-
-/* =========================================================
-   RENDER PRODUCTS
-========================================================= */
-
-function renderProducts(){
-
-  const newGrid = document.getElementById("newGrid");
-  const unstitchedGrid = document.getElementById("unstitchedGrid");
-  const bestGrid = document.getElementById("bestGrid");
-
-  newGrid.innerHTML = "";
-  unstitchedGrid.innerHTML = "";
-  bestGrid.innerHTML = "";
-
-  products.forEach((product,index)=>{
-
-    const card = document.createElement("article");
-
-    card.className = "product-card";
-
-    card.innerHTML = `
-
-      ${product.badge ? `
-        <div class="badge">${product.badge}</div>
-      ` : ""}
-
-      <div class="product-image">
-        <img
-          src="${product.photo1}"
-          alt="${product.name}"
-          loading="lazy"
-        >
-      </div>
-
-      <div class="product-info">
-
-        <div class="product-type">
-          ${product.type}
-        </div>
-
-        <div class="product-name">
-          ${product.name}
-        </div>
-
-        <div class="product-price">
-          ${product.price}
-        </div>
-
-        <div class="product-buttons">
-
-          <button
-            class="add-btn"
-            onclick="addToBag(${index})"
-          >
-            ADD TO BAG
-          </button>
-
-          <button
-            class="view-btn"
-            onclick="viewProduct(${index})"
-          >
-            DETAILS
-          </button>
-
-        </div>
-
-      </div>
-    `;
-
-    if(product.category === "new"){
-      newGrid.appendChild(card);
-    }
-
-    if(product.category === "best"){
-      bestGrid.appendChild(card);
-      unstitchedGrid.appendChild(card.cloneNode(true));
-    }
-
-  });
-
-}
-
-
-/* =========================================================
-   PRODUCT DETAILS
-========================================================= */
-
-function viewProduct(index){
-
-  const product = products[index];
-
-  let description = product.description
-    ? product.description.replace(/<br>/g,", ")
-    : "Beautifully crafted ZJ Fashion design.";
-
-  alert(
-    product.name +
-    "\n\n" +
-    description +
-    "\n\n" +
-    product.price
-  );
-
-}
-
-
-/* =========================================================
-   ADD TO BAG
-========================================================= */
-
 function addToBag(index){
 
-  const existing = bag.find(item => item.index === index);
+const existing=
+bag.find(item=>item.index===index);
 
-  if(existing){
 
-    existing.quantity += 1;
+if(existing){
 
-  }else{
+existing.quantity++;
 
-    bag.push({
-      index:index,
-      quantity:1
-    });
+}else{
 
-  }
-
-  updateBag();
-
-  openBag();
+bag.push({
+index:index,
+quantity:1
+});
 
 }
 
 
-/* =========================================================
-   UPDATE BAG
-========================================================= */
+updateBag();
+
+openBag();
+
+}
+
 
 function updateBag(){
 
-  const bagItems = document.getElementById("bagItems");
-  const bagFooter = document.getElementById("bagFooter");
-  const bagCount = document.getElementById("bagCount");
+document.getElementById("bagCount").textContent=
 
-  const totalQuantity = bag.reduce(
-    (sum,item)=>sum + item.quantity,
-    0
-  );
-
-  bagCount.textContent = totalQuantity;
-
-  if(bag.length === 0){
-
-    bagItems.innerHTML = `
-      <div class="empty-message">
-        Your bag is currently empty.
-      </div>
-    `;
-
-    bagFooter.innerHTML = "";
-
-    return;
-
-  }
+bag.reduce(
+(sum,item)=>sum+item.quantity,
+0
+);
 
 
-  let total = 0;
-
-  bagItems.innerHTML = bag.map((item)=>{
-
-    const product = products[item.index];
-
-    const priceNumber = priceOf(product);
-
-    const lineTotal = priceNumber * item.quantity;
-
-    total += lineTotal;
-
-    return `
-
-      <div class="bag-item">
-
-        <img
-          class="bag-item-image"
-          src="${product.photo1}"
-          alt="${product.name}"
-        >
-
-        <div>
-
-          <h3>${product.name}</h3>
-
-          <div class="bag-price">
-            ${product.price}
-          </div>
-
-          <div class="quantity-controls">
-
-            <button onclick="changeQuantity(${item.index},-1)">
-              −
-            </button>
-
-            <span>${item.quantity}</span>
-
-            <button onclick="changeQuantity(${item.index},1)">
-              +
-            </button>
-
-          </div>
-
-          <button
-            class="remove-btn"
-            onclick="removeFromBag(${item.index})"
-          >
-            REMOVE
-          </button>
-
-        </div>
-
-        <div style="font-size:12px;">
-          PKR ${lineTotal.toLocaleString()}
-        </div>
-
-      </div>
-
-    `;
-
-  }).join("");
+const container=
+document.getElementById("cartItems");
 
 
-  bagFooter.innerHTML = `
+if(bag.length===0){
 
-    <div class="bag-total">
-      <span>TOTAL</span>
-      <strong>PKR ${total.toLocaleString()}</strong>
-    </div>
+container.innerHTML=
+"<p>Your bag is currently empty.</p>";
 
-    <button
-      class="checkout"
-      onclick="openCheckout()"
-    >
-      CHECKOUT
-    </button>
+document.getElementById("totalPrice").textContent=
+"PKR 0";
 
-  `;
+return;
 
 }
 
 
-/* =========================================================
-   CHANGE QUANTITY
-========================================================= */
+let total=0;
 
-function changeQuantity(index,change){
+container.innerHTML="";
 
-  const item = bag.find(
-    item => item.index === index
-  );
 
-  if(!item) return;
+bag.forEach((item,index)=>{
 
-  item.quantity += change;
+const product=
+products[item.index];
 
-  if(item.quantity <= 0){
+const priceNumber=
+parseInt(
+product.price.replace(/[^\d]/g,""),
+10
+)||0;
 
-    bag = bag.filter(
-      item => item.index !== index
-    );
 
-  }
+/* FIXED TOTAL CALCULATION */
 
-  updateBag();
+total +=
+priceNumber * item.quantity;
+
+
+container.innerHTML+=`
+
+<div class="cart-item">
+
+<div class="cart-thumb">
+
+<img
+src="${product.photo1}"
+alt="${product.name}"
+>
+
+</div>
+
+
+<div>
+
+<h4>
+${product.name}
+</h4>
+
+<p>
+${product.price}
+</p>
+
+
+<div class="qty">
+
+<button
+onclick="changeQuantity(${index},-1)"
+>
+−
+</button>
+
+<span>
+${item.quantity}
+</span>
+
+<button
+onclick="changeQuantity(${index},1)"
+>
++
+</button>
+
+</div>
+
+
+<button
+class="remove"
+onclick="removeItem(${index})"
+>
+REMOVE
+</button>
+
+</div>
+
+</div>
+
+`;
+
+});
+
+
+document.getElementById("totalPrice").textContent=
+"PKR "+total.toLocaleString();
 
 }
 
 
-/* =========================================================
-   REMOVE
-========================================================= */
+function changeQuantity(index,amount){
 
-function removeFromBag(index){
+bag[index].quantity+=amount;
 
-  bag = bag.filter(
-    item => item.index !== index
-  );
+if(bag[index].quantity<=0){
 
-  updateBag();
+bag.splice(index,1);
+
+}
+
+updateBag();
 
 }
 
 
-/* =========================================================
-   DRAWERS
-========================================================= */
+function removeItem(index){
 
-function updateOverlay(){
+bag.splice(index,1);
 
-  const drawers = [
-    "bagDrawer",
-    "checkoutDrawer",
-    "confirmationDrawer",
-    "accountDrawer"
-  ];
-
-  const isOpen = drawers.some(
-    id => document.getElementById(id).classList.contains("open")
-  );
-
-  document
-    .getElementById("drawerOverlay")
-    .classList.toggle("open",isOpen);
+updateBag();
 
 }
 
 
 function openBag(){
 
-  closeAllDrawers(false);
-
-  updateBag();
-
-  document
-    .getElementById("bagDrawer")
-    .classList.add("open");
-
-  updateOverlay();
+document
+.getElementById("bagDrawer")
+.classList.add("open");
 
 }
 
 
 function closeBag(){
 
-  document
-    .getElementById("bagDrawer")
-    .classList.remove("open");
-
-  updateOverlay();
+document
+.getElementById("bagDrawer")
+.classList.remove("open");
 
 }
 
 
-function openCheckout(){
+/* =========================================================
+   FAVOURITES
+========================================================= */
 
-  if(bag.length === 0){
+function addFavourite(index){
 
-    alert("Your bag is empty.");
+if(!favourites.includes(index)){
 
-    return;
+favourites.push(index);
 
-  }
+}
 
-  closeBag();
+renderFavourites();
 
-  document
-    .getElementById("checkoutForm")
-    .reset();
-
-  document
-    .getElementById("checkoutDrawer")
-    .classList.add("open");
-
-  updateOverlay();
+openFavourites();
 
 }
 
 
-function closeCheckout(){
+function renderFavourites(){
 
-  document
-    .getElementById("checkoutDrawer")
-    .classList.remove("open");
+const list=
+document.getElementById("favouritesList");
 
-  updateOverlay();
+
+if(favourites.length===0){
+
+list.innerHTML=
+"<p>You haven't saved anything yet.</p>";
+
+return;
+
+}
+
+
+list.innerHTML="";
+
+
+favourites.forEach(index=>{
+
+const product=products[index];
+
+
+list.innerHTML+=`
+
+<div style="
+padding:18px 0;
+border-bottom:1px solid #ddd4c8;
+display:flex;
+justify-content:space-between;
+align-items:center
+">
+
+<div>
+
+<div style="
+font-family:'Cormorant Garamond';
+font-size:20px;
+color:#123C35
+">
+
+${product.name}
+
+</div>
+
+<div style="
+font-size:10px;
+margin-top:5px
+">
+
+${product.price}
+
+</div>
+
+</div>
+
+
+<button
+onclick="addToBag(${index})"
+style="
+border:1px solid #123C35;
+background:#123C35;
+color:#F7F3EC;
+padding:9px;
+font-size:8px
+"
+>
+
+BAG
+
+</button>
+
+</div>
+
+`;
+
+});
 
 }
 
 
-function closeConfirmation(){
+function openFavourites(){
 
-  document
-    .getElementById("confirmationDrawer")
-    .classList.remove("open");
-
-  updateOverlay();
+document
+.getElementById("favouriteDrawer")
+.classList.add("open");
 
 }
 
+
+function closeFavourites(){
+
+document
+.getElementById("favouriteDrawer")
+.classList.remove("open");
+
+}
+
+
+/* =========================================================
+   ACCOUNT
+========================================================= */
 
 function openAccount(){
 
-  closeAllDrawers(false);
+document
+.getElementById("accountDrawer")
+.classList.add("open");
 
-  showAccountPanel("login");
-
-  document
-    .getElementById("accountDrawer")
-    .classList.add("open");
-
-  updateOverlay();
+showAccountPanel("account");
 
 }
 
 
 function closeAccount(){
 
-  document
-    .getElementById("accountDrawer")
-    .classList.remove("open");
-
-  updateOverlay();
+document
+.getElementById("accountDrawer")
+.classList.remove("open");
 
 }
 
 
-function closeAllDrawers(update=true){
+function demoLogin(){
 
-  document
-    .querySelectorAll(".drawer")
-    .forEach(drawer=>{
-      drawer.classList.remove("open");
-    });
+alert("Welcome to ZJ Fashion.");
 
-  if(update){
-    updateOverlay();
-  }
+}
+
+
+function showAccountPanel(panel){
+
+const accountPanel=
+document.getElementById("accountPanel");
+
+const ordersPanel=
+document.getElementById("ordersPanel");
+
+const accountTab=
+document.getElementById("accountTab");
+
+const ordersTab=
+document.getElementById("ordersTab");
+
+
+accountPanel.classList.toggle(
+"active",
+panel==="account"
+);
+
+ordersPanel.classList.toggle(
+"active",
+panel==="orders"
+);
+
+
+accountTab.classList.toggle(
+"active",
+panel==="account"
+);
+
+ordersTab.classList.toggle(
+"active",
+panel==="orders"
+);
+
+
+if(panel==="orders"){
+
+renderOrders();
+
+}
+
+}
+
+
+/* =========================================================
+   CHECKOUT
+========================================================= */
+
+function openCheckout(){
+
+if(bag.length===0){
+
+alert("Your bag is empty.");
+
+return;
+
+}
+
+
+closeBag();
+
+document
+.getElementById("checkoutForm")
+.reset();
+
+document
+.getElementById("checkoutDrawer")
+.classList.add("open");
+
+}
+
+
+function closeCheckout(){
+
+document
+.getElementById("checkoutDrawer")
+.classList.remove("open");
 
 }
 
@@ -1618,102 +2776,107 @@ function closeAllDrawers(update=true){
 
 function generateOrderNumber(){
 
-  return "ZJ-" +
-    Math.floor(
-      1000 + Math.random() * 9000
-    );
+return "ZJ-"+
+
+Math.floor(
+1000+
+Math.random()*9000
+);
 
 }
 
 
 /* =========================================================
-   LOCAL STORAGE
+   ORDER STORAGE
 ========================================================= */
 
 function getOrders(){
 
-  try{
+try{
 
-    return JSON.parse(
-      localStorage.getItem(ORDERS_STORAGE_KEY) || "[]"
-    );
+return JSON.parse(
+localStorage.getItem(ORDERS_STORAGE_KEY)||"[]"
+);
 
-  }catch(error){
+}catch(error){
 
-    return [];
+return[];
 
-  }
+}
 
 }
 
 
 function saveOrder(order){
 
-  const orders = getOrders();
+const orders=
+getOrders();
 
-  orders.unshift(order);
+orders.unshift(order);
 
-  localStorage.setItem(
-    ORDERS_STORAGE_KEY,
-    JSON.stringify(orders)
-  );
+localStorage.setItem(
+ORDERS_STORAGE_KEY,
+JSON.stringify(orders)
+);
 
 }
 
 
 /* =========================================================
-   BUILD ORDER MESSAGE
+   ORDER MESSAGE
 ========================================================= */
 
 function buildOrderMessage(order){
 
-  return [
+return [
 
-    "NEW ZJ FASHION ORDER",
+"NEW ZJ FASHION ORDER",
 
-    "Order #: " + order.orderNumber,
+"Order #: "+order.orderNumber,
 
-    "Date: " + order.date,
+"Date: "+order.date,
 
-    "",
+"",
 
-    "CUSTOMER",
+"CUSTOMER",
 
-    "Name: " + order.customer.name,
+"Name: "+order.customer.name,
 
-    "Email: " + order.customer.email,
+"Email: "+order.customer.email,
 
-    "Phone: " + order.customer.phone,
+"Phone: "+order.customer.phone,
 
-    "Address: " + order.customer.address,
+"Address: "+order.customer.address,
 
-    "Postcode: " + order.customer.postcode,
+"Postcode: "+order.customer.postcode,
 
-    "Country: " + order.customer.country,
+"Country: "+order.customer.country,
 
-    "",
+"",
 
-    "ITEMS",
+"ITEMS",
 
-    ...order.items.map(
-      item =>
-        item.name +
-        " x" +
-        item.quantity +
-        " — PKR " +
-        item.lineTotal.toLocaleString()
-    ),
+...order.items.map(
 
-    "",
+item=>
+item.name+
+" x"+
+item.quantity+
+" — PKR "+
+item.lineTotal.toLocaleString()
 
-    "TOTAL: PKR " +
-    order.total.toLocaleString(),
+),
 
-    "",
+"",
 
-    "Payment: To be arranged separately."
+"TOTAL: PKR "+
+order.total.toLocaleString(),
 
-  ].join("\n");
+"",
+
+"Payment: To be arranged separately."
+
+].join("\n");
 
 }
 
@@ -1724,118 +2887,138 @@ function buildOrderMessage(order){
 
 function placeOrder(event){
 
-  event.preventDefault();
-
-  if(bag.length === 0){
-
-    alert("Your bag is empty.");
-
-    return;
-
-  }
+event.preventDefault();
 
 
-  const items = bag.map(item=>{
+if(bag.length===0){
 
-    const product = products[item.index];
+alert("Your bag is empty.");
 
-    const lineTotal =
-      priceOf(product) * item.quantity;
+return;
 
-    return {
-
-      name:product.name,
-
-      price:product.price,
-
-      quantity:item.quantity,
-
-      lineTotal:lineTotal
-
-    };
-
-  });
+}
 
 
-  const total = items.reduce(
-    (sum,item)=>sum + item.lineTotal,
-    0
-  );
+/* Create order items */
+
+const items=
+bag.map(item=>{
+
+const product=
+products[item.index];
+
+const price=
+parseInt(
+product.price.replace(/[^\d]/g,""),
+10
+)||0;
 
 
-  const order = {
+return{
 
-    orderNumber:generateOrderNumber(),
+name:product.name,
 
-    date:new Date().toLocaleString(),
+price:product.price,
 
-    customer:{
+quantity:item.quantity,
 
-      name:
-        document
-          .getElementById("customerName")
-          .value
-          .trim(),
+lineTotal:
+price*item.quantity
 
-      email:
-        document
-          .getElementById("customerEmail")
-          .value
-          .trim(),
+};
 
-      phone:
-        document
-          .getElementById("customerPhone")
-          .value
-          .trim(),
-
-      address:
-        document
-          .getElementById("customerAddress")
-          .value
-          .trim(),
-
-      postcode:
-        document
-          .getElementById("customerPostcode")
-          .value
-          .trim(),
-
-      country:
-        document
-          .getElementById("customerCountry")
-          .value
-          .trim()
-
-    },
-
-    items:items,
-
-    total:total
-
-  };
+});
 
 
-  /* SAVE ORDER */
+/* Calculate total */
 
-  saveOrder(order);
+const total=
+items.reduce(
+(sum,item)=>
+sum+item.lineTotal,
+0
+);
 
-  currentOrder = order;
+
+/* Create complete order */
+
+const order={
+
+orderNumber:
+generateOrderNumber(),
+
+date:
+new Date().toLocaleString(),
+
+customer:{
+
+name:
+document
+.getElementById("customerName")
+.value
+.trim(),
+
+email:
+document
+.getElementById("customerEmail")
+.value
+.trim(),
+
+phone:
+document
+.getElementById("customerPhone")
+.value
+.trim(),
+
+address:
+document
+.getElementById("customerAddress")
+.value
+.trim(),
+
+postcode:
+document
+.getElementById("customerPostcode")
+.value
+.trim(),
+
+country:
+document
+.getElementById("customerCountry")
+.value
+.trim()
+
+},
+
+items:items,
+
+total:total
+
+};
 
 
-  /*
-    IMPORTANT:
-    The bag is only cleared AFTER the order
-    has been successfully created and saved.
-  */
+/* Save order BEFORE clearing bag */
 
-  bag = [];
+saveOrder(order);
 
-  updateBag();
+currentOrder=order;
 
-  closeCheckout();
 
-  showConfirmation(order);
+/* Now clear bag */
+
+bag=[];
+
+updateBag();
+
+
+/* Close checkout */
+
+closeCheckout();
+
+
+/* Show confirmation */
+
+showConfirmation(order);
 
 }
 
@@ -1846,105 +3029,142 @@ function placeOrder(event){
 
 function showConfirmation(order){
 
-  const content =
-    document.getElementById("confirmationContent");
-
-  content.innerHTML = `
-
-    <div class="order-success">
-
-      <h3>Thank You</h3>
-
-      <p>
-        Your order has been successfully placed.
-      </p>
-
-      <div class="order-number">
-        ${order.orderNumber}
-      </div>
-
-      <p>
-        Please keep your order number for reference.
-        ZJ Fashion will contact you to arrange payment
-        separately.
-      </p>
+const content=
+document.getElementById("confirmationContent");
 
 
-      <div class="order-summary">
+content.innerHTML=`
 
-        ${order.items.map(item=>`
+<div class="order-success">
 
-          <div class="order-row">
+<h3>
+Thank You
+</h3>
 
-            <span>
-              ${item.name}
-              ×${item.quantity}
-            </span>
-
-            <strong>
-              PKR ${item.lineTotal.toLocaleString()}
-            </strong>
-
-          </div>
-
-        `).join("")}
+<p>
+Your order has been successfully placed.
+</p>
 
 
-        <div class="order-total">
-
-          <span>TOTAL</span>
-
-          <span>
-            PKR ${order.total.toLocaleString()}
-          </span>
-
-        </div>
-
-      </div>
+<div class="order-number">
+${order.orderNumber}
+</div>
 
 
-      <div class="order-actions">
-
-        <button
-          class="whatsapp-btn"
-          onclick="openWhatsApp(currentOrder)"
-        >
-          SEND ORDER ON WHATSAPP
-        </button>
-
-        <button
-          class="secondary-btn"
-          onclick="emailOrder(currentOrder)"
-        >
-          EMAIL ORDER DETAILS
-        </button>
-
-        <button
-          class="secondary-btn"
-          onclick="openOrdersFromConfirmation()"
-        >
-          VIEW YOUR ORDERS
-        </button>
-
-        <button
-          class="secondary-btn"
-          onclick="continueShopping()"
-        >
-          CONTINUE SHOPPING
-        </button>
-
-      </div>
-
-    </div>
-
-  `;
+<p>
+Please keep this order number for reference.
+ZJ Fashion will contact you to arrange payment separately.
+</p>
 
 
-  document
-    .getElementById("confirmationDrawer")
-    .classList.add("open");
+<div class="confirmation-note">
 
-  updateOverlay();
+<strong>
+NEXT STEP
+</strong>
+
+<br>
+
+Send your order to ZJ Fashion on WhatsApp or by email
+using the buttons below.
+
+</div>
+
+
+<div class="order-summary">
+
+
+${order.items.map(item=>`
+
+<div class="order-row">
+
+<span>
+
+${item.name}
+
+×${item.quantity}
+
+</span>
+
+<strong>
+
+PKR ${item.lineTotal.toLocaleString()}
+
+</strong>
+
+</div>
+
+`).join("")}
+
+
+<div class="order-total">
+
+<span>
+TOTAL
+</span>
+
+<span>
+PKR ${order.total.toLocaleString()}
+</span>
+
+</div>
+
+</div>
+
+
+<div class="order-actions">
+
+
+<button
+onclick="openWhatsApp(currentOrder)"
+>
+SEND ORDER ON WHATSAPP
+</button>
+
+
+<button
+class="secondary-btn"
+onclick="emailOrder(currentOrder)"
+>
+EMAIL ORDER DETAILS
+</button>
+
+
+<button
+class="secondary-btn"
+onclick="openOrdersFromConfirmation()"
+>
+VIEW YOUR ORDERS
+</button>
+
+
+<button
+class="secondary-btn"
+onclick="continueShopping()"
+>
+CONTINUE SHOPPING
+</button>
+
+
+</div>
+
+</div>
+
+`;
+
+
+document
+.getElementById("confirmationDrawer")
+.classList.add("open");
+
+}
+
+
+function closeConfirmation(){
+
+document
+.getElementById("confirmationDrawer")
+.classList.remove("open");
 
 }
 
@@ -1955,18 +3175,24 @@ function showConfirmation(order){
 
 function openWhatsApp(order){
 
-  if(!order) return;
+if(!order)return;
 
-  const message =
-    buildOrderMessage(order);
 
-  const url =
-    "https://wa.me/" +
-    SHOP_WHATSAPP +
-    "?text=" +
-    encodeURIComponent(message);
+const message=
+buildOrderMessage(order);
 
-  window.open(url,"_blank");
+
+const url=
+"https://wa.me/"+
+SHOP_WHATSAPP+
+"?text="+
+encodeURIComponent(message);
+
+
+window.open(
+url,
+"_blank"
+);
 
 }
 
@@ -1977,26 +3203,29 @@ function openWhatsApp(order){
 
 function emailOrder(order){
 
-  if(!order) return;
+if(!order)return;
 
-  const subject =
-    encodeURIComponent(
-      "ZJ Fashion Order " +
-      order.orderNumber
-    );
 
-  const body =
-    encodeURIComponent(
-      buildOrderMessage(order)
-    );
+const subject=
+encodeURIComponent(
+"ZJ Fashion Order "+
+order.orderNumber
+);
 
-  window.location.href =
-    "mailto:" +
-    SHOP_EMAIL +
-    "?subject=" +
-    subject +
-    "&body=" +
-    body;
+
+const body=
+encodeURIComponent(
+buildOrderMessage(order)
+);
+
+
+window.location.href=
+"mailto:"+
+SHOP_EMAIL+
+"?subject="+
+subject+
+"&body="+
+body;
 
 }
 
@@ -2007,174 +3236,199 @@ function emailOrder(order){
 
 function renderOrders(){
 
-  const ordersList =
-    document.getElementById("ordersList");
+const ordersList=
+document.getElementById("ordersList");
 
-  const orders = getOrders();
-
-
-  if(orders.length === 0){
-
-    ordersList.innerHTML = `
-
-      <div class="empty-orders">
-
-        You have not placed any orders yet.
-
-      </div>
-
-    `;
-
-    return;
-
-  }
+const orders=
+getOrders();
 
 
-  ordersList.innerHTML =
-    orders.map(order=>`
+if(orders.length===0){
 
-      <div class="saved-order">
+ordersList.innerHTML=`
 
-        <div class="saved-order-header">
+<div class="empty-orders">
 
-          <div class="saved-order-number">
-            ${order.orderNumber}
-          </div>
+You have not placed any orders yet.
 
-          <div class="saved-order-meta">
-            ${order.date}
-          </div>
+</div>
 
-        </div>
+`;
 
+return;
 
-        <div class="saved-order-meta">
-
-          ${order.customer.country}
-
-        </div>
+}
 
 
-        <div class="saved-order-items">
+ordersList.innerHTML=
+orders.map(order=>`
 
-          ${order.items.map(item=>`
-
-            <div class="saved-order-item">
-
-              <span>
-                ${item.name} ×${item.quantity}
-              </span>
-
-              <strong>
-                PKR ${item.lineTotal.toLocaleString()}
-              </strong>
-
-            </div>
-
-          `).join("")}
-
-        </div>
+<div class="saved-order">
 
 
-        <div class="saved-order-total">
+<div class="saved-order-header">
 
-          <span>TOTAL</span>
+<div class="saved-order-number">
 
-          <span>
-            PKR ${order.total.toLocaleString()}
-          </span>
+${order.orderNumber}
 
-        </div>
+</div>
 
-      </div>
 
-    `).join("");
+<div class="saved-order-meta">
+
+${order.date}
+
+</div>
+
+</div>
+
+
+<div class="saved-order-meta">
+
+${order.customer.name}
+
+<br>
+
+${order.customer.country}
+
+</div>
+
+
+<div class="saved-order-items">
+
+
+${order.items.map(item=>`
+
+<div class="saved-order-item">
+
+<span>
+
+${item.name}
+×${item.quantity}
+
+</span>
+
+<strong>
+
+PKR ${item.lineTotal.toLocaleString()}
+
+</strong>
+
+</div>
+
+`).join("")}
+
+
+</div>
+
+
+<div class="saved-order-total">
+
+<span>
+TOTAL
+</span>
+
+<span>
+PKR ${order.total.toLocaleString()}
+</span>
+
+</div>
+
+
+</div>
+
+`).join("");
 
 }
 
 
 /* =========================================================
-   ACCOUNT TABS
-========================================================= */
-
-function showAccountPanel(panel){
-
-  const loginPanel =
-    document.getElementById("loginPanel");
-
-  const ordersPanel =
-    document.getElementById("ordersPanel");
-
-  const loginTab =
-    document.getElementById("loginTab");
-
-  const ordersTab =
-    document.getElementById("ordersTab");
-
-
-  loginPanel.classList.toggle(
-    "active",
-    panel === "login"
-  );
-
-  ordersPanel.classList.toggle(
-    "active",
-    panel === "orders"
-  );
-
-  loginTab.classList.toggle(
-    "active",
-    panel === "login"
-  );
-
-  ordersTab.classList.toggle(
-    "active",
-    panel === "orders"
-  );
-
-
-  if(panel === "orders"){
-
-    renderOrders();
-
-  }
-
-}
-
-
-/* =========================================================
-   OPEN ORDERS FROM CONFIRMATION
+   ORDER NAVIGATION
 ========================================================= */
 
 function openOrdersFromConfirmation(){
 
-  closeConfirmation();
+closeConfirmation();
 
-  openAccount();
+openAccount();
 
-  showAccountPanel("orders");
+showAccountPanel("orders");
 
 }
 
-
-/* =========================================================
-   CONTINUE SHOPPING
-========================================================= */
 
 function continueShopping(){
 
-  closeConfirmation();
+closeConfirmation();
 
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
+document
+.getElementById("new")
+.scrollIntoView({
+behavior:"smooth"
+});
 
 }
 
 
 /* =========================================================
-   INITIALISE
+   NEWSLETTER
+========================================================= */
+
+function subscribe(event){
+
+event.preventDefault();
+
+alert(
+"Thank you for joining ZJ Fashion."
+);
+
+event.target.reset();
+
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+function toggleSearch(){
+
+document
+.getElementById("searchBox")
+.classList.toggle("open");
+
+}
+
+
+function searchProducts(value){
+
+const cards=
+document.querySelectorAll(".product");
+
+
+cards.forEach(card=>{
+
+const name=
+card.dataset.name;
+
+
+card.style.display=
+name.includes(
+value.toLowerCase()
+)
+?
+""
+:
+"none";
+
+});
+
+}
+
+
+/* =========================================================
+   START WEBSITE
 ========================================================= */
 
 renderProducts();
